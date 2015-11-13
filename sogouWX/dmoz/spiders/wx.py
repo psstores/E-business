@@ -71,34 +71,3 @@ class DmozSpider(CrawlSpider):
             item['wID']=site.xpath('div[@class="txt-box"]/div[@class="s-p"]/a[@id="weixin_account"]/@title').extract()
             # item['date']=site.xpath('div[@class="txt-box"]/div[@class="s-p"]/text()').extract()
             yield item
-##        # items=[]
-##        sel=Selector(response)
-##        p=sel.xpath('//a[@class="linkOn"]/text()').extract()
-##        # sites=sel.xpath('//dl[@class="j-every clearfix"')
-##        sites=sel.xpath('//dl[@class="j-every clearfix"]')
-##        print sites
-##        print len(sites)
-##        print type(sites)
-##      
-##        # print len(sites)
-##        for site in sites:
-##            item=GanjiItem()
-##            item['page']=p
-##            item['title']=site.xpath('dt/a/text()').extract()
-##            item['add']=site.xpath('dd/a[@class="adds"]/text()').extract()
-##            item['time']=site.xpath('dd[@class="j-time"]/text()').extract()
-##            item['url']=''.join(list(list('http://sz.ganji.com')+site.xpath('dt[@class="f-introd"]/a/@href').extract()))   
-##            print type(item['title'])
-##            print len(item['title'])
-##            print '888888888888888888888888888888888888888888888888888888888888888888888888888888888888'
-##            print type(site.extract())
-##            f=open('test.txt','a')
-##            f.write(site.extract().encode('utf-8')+'\r\n'+'*******************************************************************************')
-##            f.close()
-##            yield item
-
-
-
-
-
-
